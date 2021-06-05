@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="An educative and eloquent technical blog post on the prestigious go-blog platform">
+	<meta name="author" content="Kealan Parr">
+</head>
+
+<body>
+	<a href="/home">
+		<h1>Home</h1>
+	</a>
+	<script>
+		function slugParse() {
+			var slug = document.getElementsByTagName("form")[0][2].value;
+			slug = slug.toLowerCase()
+			if (slug.includes(" ")) {
+				slug = slug.replaceAll(" ", "-")
+			}
+			document.getElementsByTagName("form")[0][2].value = slug;
+		}
+	</script>
+	<div>
+		<h1>Add a new Post</h1>
+		<form action="/save/add" method="POST" onsubmit="slugParse()">
+			<label for="header">Header:</label><br>
+			<input type="text" id="header" name="header" style="width: 300px; height: 100px;" required><br>
+
+			<label for="content">Content:</label><br>
+			<input type="text" id="content" name="content" style="width: 300px; height: 100px;" required><br>
+
+			<label for="slug">Slug:</label><br>
+			<p>For the slug, please ensure it's all lowercase and kebab case (no spaces)</p>
+			<input type="text" id="slug" name="slug" style="width: 300px; height: 100px;" required><br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+# Used to query the database
+# Run the script to open a terminal to run commands like querying rows and columns etc
+docker exec -it blog-db psql -Upostgres -dblog

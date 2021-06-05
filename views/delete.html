@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="An educative and eloquent technical blog post on the prestigious go-blog platform">
+	<meta name="author" content="Kealan Parr">
+</head>
+
+<body>
+	<a href="/home">
+		<h1>Home</h1>
+	</a>
+	<div>
+		<h1>Delete a Post</h1>
+		<form action="/save/del" method="POST">
+
+			<label for="slug">Slug:</label><br>
+			<input type="text" id="slug" name="slug" style="width: 300px; height: 100px;" required><br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+
+</html>

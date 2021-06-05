@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="An educative and eloquent technical blog post on the prestigious go-blog platform">
+	<meta name="author" content="Kealan Parr">
+</head>
+<style>
+	.sideBySide {
+		width: 49%;
+		height: 100%;
+		display: inline-block;
+		position: relative;
+	}
+</style>
+
+<body>
+	<div class="sideBySide">
+		<h1>View all the posts</h1>
+		<ul>
+			{{range .Posts}}
+			<li><a href="/post/{{.Slug}}">{{.Header}}</a> </li>
+			{{end}}
+		</ul>
+	</div>
+	<div class="sideBySide">
+		<h1><a href="/new/">Add a new post</a></h1>
+		<h1><a href="/edit/">Edit a post</a></h1>
+		<h1><a href="/delete/">Delete a post</a></h1>
+	</div>
+</body>
+
+</html>

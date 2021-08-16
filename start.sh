@@ -1,7 +1,6 @@
 # Aborts our script if there's an error
 set -e
 
-# Word words words
 echo "Beginning build proccess.."
 docker-compose up -d
 
